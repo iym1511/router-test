@@ -9,10 +9,11 @@ const Main = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/Home" element={<Home />}></Route>
+        <Route index path="/Home" element={<Home />}></Route>
         <Route path="/About" element={<About />}></Route>
         <Route path="/Product" element={<Product />}></Route>
-        <Route path="/ProductPage" element={<ProductPage />}></Route>
+        <Route path="/ProductPage" element={<ProductPage />}></Route> {/** 쿼리스트링 */}
+        <Route path="/ProductPage/:name" element={<ProductPage />}></Route> {/** param */}
       </Route>
     </Routes>
   );
